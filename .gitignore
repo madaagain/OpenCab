@@ -31,3 +31,39 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+
+# Environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Éditeurs et IDE
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Autres
+.eslintcache
+.vercel
+.next
