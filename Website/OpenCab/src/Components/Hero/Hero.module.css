@@ -1,0 +1,260 @@
+/* Hero.module.css */
+.container {
+    min-height: 100vh;
+    position: relative;
+    font-family:
+        "UberMove",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    overflow: hidden;
+    padding: 80px 40px 40px; /* Espace pour le header fixe */
+}
+
+/* Video Container with Rounded Corners */
+.videoContainer {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px);
+    max-height: 800px;
+    margin: 0 auto;
+    background-color: #000000; /* Fond noir pour renforcer l'assombrissement */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Video Background */
+.backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0.9; /* Opacité réduite pour assombrir la vidéo */
+    filter: brightness(1) contrast(1.1); /* Assombrissement supplémentaire */
+}
+
+/* Overlay sombre */
+.videoContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2)
+    );
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.heroSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    padding: 0 40px;
+}
+
+.heroContent {
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.2); /* Légèrement plus transparent */
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    margin-left: 80px;
+    z-index: 3; /* Au-dessus de l'overlay */
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 24px;
+    font-family: "UberMove", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.downloadSection {
+    margin-bottom: 32px;
+}
+
+.downloadTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.downloadButtons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.downloadButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.downloadButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.comingSoonButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 150px;
+    text-align: center;
+    cursor: not-allowed;
+}
+
+.ctaButton {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .container {
+        padding: 70px 20px 40px;
+    }
+
+    .heroContent {
+        margin-left: 40px;
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 20px 30px;
+    }
+
+    .videoContainer {
+        height: calc(100vh - 100px);
+    }
+
+    .heroContent {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 50px 15px 20px;
+    }
+
+    .videoContainer {
+        height: calc(100vh - 80px);
+    }
+
+    .heroSection {
+        padding: 0 15px;
+    }
+
+    .heroContent {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .downloadButtons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .downloadButton,
+    .comingSoonButton {
+        width: 100%;
+    }
+}

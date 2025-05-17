@@ -1,0 +1,130 @@
+/* Mission.module.css */
+.missionSection {
+    padding: 120px 40px;
+    background-color: white; /* Fond mis à jour */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.missionImage {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(9, 23, 23, 0.1); /* Ombre ajoutée */
+}
+
+.textContent {
+    padding-left: 40px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #091717; /* Couleur titre mise à jour */
+    margin-bottom: 32px;
+    font-family:
+        "UberMove",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+}
+
+.description {
+    font-size: 18px;
+    color: rgba(9, 23, 23, 0.7); /* Couleur description mise à jour */
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.primaryButton {
+    background-color: #091717; /* Couleur bouton mise à jour */
+    color: #fbfaf4; /* Couleur texte bouton mise à jour */
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s ease;
+}
+
+.primaryButton:hover {
+    background-color: rgba(9, 23, 23, 0.8); /* Couleur hover mise à jour */
+}
+
+.loginText {
+    font-size: 16px;
+    color: rgba(9, 23, 23, 0.7); /* Couleur texte mise à jour */
+}
+
+.loginLink {
+    color: #091717; /* Couleur lien mise à jour */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.loginLink:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .missionSection {
+        padding: 80px 40px;
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .textContent {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .ctaButtons {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .missionSection {
+        padding: 60px 20px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

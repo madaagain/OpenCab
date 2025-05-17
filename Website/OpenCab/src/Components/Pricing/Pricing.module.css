@@ -1,0 +1,240 @@
+/* Pricing.module.css */
+
+.pricingSection {
+    padding: 120px 40px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 16px;
+    font-family:
+        "UberMove",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #5f5f5f;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+    align-items: stretch;
+}
+
+.planCard {
+    background-color: #f6f6f6;
+    border-radius: 16px;
+    padding: 40px;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.planCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.planCardPopular {
+    border-color: #000;
+    background-color: #ffffff;
+}
+
+.planHeader {
+    margin-bottom: 40px;
+}
+
+.planName {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.planDescription {
+    font-size: 16px;
+    color: #5f5f5f;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.planPricing {
+    margin-bottom: 16px;
+}
+
+.planPrice {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.currency {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.amount {
+    font-size: 56px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 4px;
+}
+
+.period {
+    font-size: 18px;
+    color: #5f5f5f;
+}
+
+.customPrice {
+    text-align: left;
+}
+
+.customPriceText {
+    font-size: 56px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.priceNote,
+.trialNote {
+    font-size: 14px;
+    color: #5f5f5f;
+    margin: 0;
+}
+
+.trialNote {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.planContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 auto 0;
+    flex-grow: 1;
+}
+
+.featureItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #000;
+}
+
+.featureIcon {
+    color: #10b981;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.planButton {
+    width: 100%;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #000;
+    background-color: #ffffff;
+    color: #000;
+    margin-top: auto;
+}
+
+.planButton:hover {
+    background-color: #000;
+    color: #ffffff;
+}
+
+.planButtonPopular {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.planButtonPopular:hover {
+    background-color: #333;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footerText {
+    font-size: 16px;
+    color: #5f5f5f;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .pricingSection {
+        padding: 80px 40px;
+    }
+
+    .plansGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricingSection {
+        padding: 60px 20px;
+    }
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .planCard {
+        padding: 32px;
+    }
+
+    .amount,
+    .customPriceText {
+        font-size: 48px;
+    }
+}
