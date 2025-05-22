@@ -9,6 +9,7 @@ import Layout from "./Components/Layout/Layout";
 import Footer from "./Components/Footer/Footer";
 import HomePage from "./Pages/Home";
 import PricingPage from "./Pages/Pricing";
+import RegisterPage from "./Pages/Register";
 
 // Composant pour gérer le scroll automatique
 function ScrollToHashElement() {
@@ -61,6 +62,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </main>
           <Footer />

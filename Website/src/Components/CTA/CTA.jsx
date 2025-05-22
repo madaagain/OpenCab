@@ -14,7 +14,7 @@ const CTA = () => {
             vos choix, pas leurs profits.
           </p>
           <div className={styles.buttonContainer}>
-            <a href="#" className={styles.downloadButton}>
+            <a href="/register" className={styles.downloadButton}>
               Télécharger l'app
             </a>
           </div>
